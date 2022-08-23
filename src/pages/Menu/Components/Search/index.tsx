@@ -11,8 +11,9 @@ export const Search: FC<SEARCHINTERFACE> = ({ search, setSearch }) => {
   return (
     <div className={styles.search}>
       <input
-        value={search}
         onChange={(event) => setSearch(event.target.value)}
+        placeholder="Buscar"
+        value={search}
       />
       <CgSearch size={20} color="#4C4D5E" />
     </div>
