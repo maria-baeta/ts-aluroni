@@ -4,16 +4,29 @@ import { useState } from "react";
 import classNames from "classnames";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
-export const Order = () => {
+interface ORDERINTERFACE {
+  order: string;
+  setOrder: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const Order = ({ order, setOrder }: ORDERINTERFACE) => {
   const [open, setOpen] = useState(false);
+
+  const titleOrder =
+    order && options.find((option) => option.value === order)?.nome;
+
+  console.log(titleOrder);
 
   return (
     <button
-      className={styles.order}
+      className={classNames({
+        [styles.order]: true,
+        [styles["order--active"]]: order !== "",
+      })}
       onClick={() => setOpen(!open)}
       onBlur={() => setOpen(false)}
     >
-      <span>Ordenar por</span>
+      <span>{titleOrder || "Ordenar por"}</span>
       {open ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -26,7 +39,11 @@ export const Order = () => {
         })}
       >
         {options.map((option) => (
-          <div className={styles.order__option} key={option.value}>
+          <div
+            className={styles.order__option}
+            key={option.value}
+            onClick={() => setOrder(option.value)}
+          >
             {option.nome}
           </div>
         ))}

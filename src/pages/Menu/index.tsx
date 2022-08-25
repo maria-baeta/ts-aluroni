@@ -6,6 +6,7 @@ import { Search, Filters, Order } from "./Components";
 export const Menu = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
+  const [order, setOrder] = useState("");
 
   return (
     <main>
@@ -20,7 +21,7 @@ export const Menu = () => {
         <Search search={search} setSearch={setSearch} />
         <div className={styles.menu__filters}>
           <Filters filter={filter} setFilter={setFilter} />
-          <Order />
+          <Order order={order} setOrder={setOrder} />
         </div>
       </section>
     </main>
