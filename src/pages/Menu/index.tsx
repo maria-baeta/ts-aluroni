@@ -1,7 +1,7 @@
 import styles from "./Menu.module.scss";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { useState } from "react";
-import { Search, Filters, Order } from "./Components";
+import { Search, Filters, Order, Items } from "./Components";
 
 export const Menu = () => {
   const [search, setSearch] = useState("");
@@ -23,6 +23,7 @@ export const Menu = () => {
           <Filters filter={filter} setFilter={setFilter} />
           <Order order={order} setOrder={setOrder} />
         </div>
+        <Items />
       </section>
     </main>
   );
