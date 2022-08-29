@@ -13,7 +13,7 @@ export const Order = ({ order, setOrder }: ORDERINTERFACE) => {
   const [open, setOpen] = useState(false);
 
   const titleOrder =
-    order && options.find((option) => option.value === order)?.nome;
+    order && options.find((option) => option.value === order)?.name;
 
   console.log(titleOrder);
 
@@ -44,7 +44,7 @@ export const Order = ({ order, setOrder }: ORDERINTERFACE) => {
             key={option.value}
             onClick={() => setOrder(option.value)}
           >
-            {option.nome}
+            {option.name}
           </div>
         ))}
       </div>

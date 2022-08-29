@@ -1,18 +1,30 @@
 [
   {
-    "nome": "Limpar",
+    "name": "Limpar",
     "value": ""
   },
   {
-    "nome": "Porção",
-    "value": "porcao"
+    "name": "Menor Preço",
+    "value": "lowestPrice"
   },
   {
-    "nome": "Qtd. pessoas",
-    "value": "qtd_pessoas"
+    "name": "Maior preço",
+    "value": "biggestPrice"
   },
   {
-    "nome": "Preço",
-    "value": "preco"
+    "name": "Pequenas porções",
+    "value": "smallPortions"
+  },
+  {
+    "name": "Grandes porções",
+    "value": "bigPortions"
+  },
+  {
+    "name": "Serve uma pessoa",
+    "value": "forOne"
+  },
+  {
+    "name": "Serve mais pessoas",
+    "value": "forMore"
   }
 ]
