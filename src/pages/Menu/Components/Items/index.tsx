@@ -13,9 +13,15 @@ interface INTERFACEITEMS {
   search: string;
   filter: number | null;
   order: string;
+  themeDark: boolean;
 }
 
-export const Items: FC<INTERFACEITEMS> = ({ search, filter, order }) => {
+export const Items: FC<INTERFACEITEMS> = ({
+  themeDark,
+  search,
+  filter,
+  order,
+}) => {
   const [list, setList] = useState(items);
 
   useEffect(() => {
@@ -30,7 +36,7 @@ export const Items: FC<INTERFACEITEMS> = ({ search, filter, order }) => {
   return (
     <div className={styles.items}>
       {list.map((item) => (
-        <Item key={item.id} {...item} />
+        <Item themeDark={themeDark} key={item.id} item={item} />
       ))}
     </div>
   );
