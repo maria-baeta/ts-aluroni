@@ -1,7 +1,12 @@
 @import "styles/_variables.scss";
 @import "styles/_breakpoints.scss";
 
+.dark {
+  background-color: $dark;
+}
 .menus {
+  display: flex;
+  justify-content: space-between;
   padding: 20px $padding-horizontal;
   @media (max-width: $desktop_xsm) {
     padding: 20px $padding-horizontal-mobile;
@@ -50,8 +55,13 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
-  &__title {
+  &__title_ligth {
     color: $dark;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  &__title_dark {
+    color: white;
     font-size: 3rem;
     margin-bottom: 30px;
   }
