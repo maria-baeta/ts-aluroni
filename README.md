@@ -1,4 +1,4 @@
-# Projeto Alura-studies
+# Projeto Alura-Aluroni
 
 Projeto desenvolvido durante o curso **React: lidando com arquivos estáticos** oferecido pela plataforma **Alura**.
 
