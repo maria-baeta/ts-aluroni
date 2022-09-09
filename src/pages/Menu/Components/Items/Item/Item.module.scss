@@ -1,11 +1,15 @@
 @import "styles/_variables.scss";
 @import "styles/_breakpoints.scss";
 
-$massas: #d73b3b;
-$carnes: #30201e;
-$combos: #e6c864;
-$veganos: #80aa40;
+$massasLigth: #3b91d7;
+$carnesLigth: #d73b3b;
+$combosLigth: #e6c864;
+$veganosLigth: #80aa40;
 
+$massasDark: #6fa6d3;
+$carnesDark: #d16161;
+$combosDark: #f7e198;
+$veganosDark: #95af6f;
 .item {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +24,21 @@ $veganos: #80aa40;
       width: 100%;
     }
   }
-  &__description {
+  &__description_ligth {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+    @media (max-width: $desktop_xsm) {
+      flex-direction: row;
+      margin-top: 20px;
+      padding: 0;
+    }
+  }
+  &__description_dark {
+    color: white;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -71,24 +89,47 @@ $veganos: #80aa40;
     height: 40px;
     justify-content: center;
     padding: 10px 30px;
-    &__massas {
-      background-color: $massas;
+    &__massasLigth {
+      background-color: $massasLigth;
       color: white;
     }
-    &__carnes {
-      background-color: $carnes;
+    &__carnesLigth {
+      background-color: $carnesLigth;
       color: white;
     }
-    &__combos {
-      background-color: $combos;
+    &__combosLigth {
+      background-color: $combosLigth;
     }
-    &__veganos {
-      background-color: $veganos;
+    &__veganosLigth {
+      background-color: $veganosLigth;
+    }
+    &__massasDark {
+      background-color: $massasDark;
+      color: black;
+    }
+    &__carnesDark {
+      background-color: $carnesDark;
+      color: black;
+    }
+    &__combosDark {
+      background-color: $combosDark;
+    }
+    &__veganosDark {
+      background-color: $veganosDark;
     }
   }
-  &__portion,
-  &__qtdpeople,
+  &__portion_ligth,
+  &__qtdpeople_ligth,
   &__value {
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: bold;
+    justify-content: center;
+  }
+  &__portion_dark,
+  &__qtdpeople_dark {
+    color: white;
     align-items: center;
     display: flex;
     font-size: 1.25rem;

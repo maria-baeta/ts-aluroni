@@ -37,7 +37,12 @@ export const Menu = () => {
           <Filters filter={filter} setFilter={setFilter} />
           <Order order={order} setOrder={setOrder} />
         </div>
-        <Items search={search} filter={filter} order={order} />
+        <Items
+          themeDark={themeDark}
+          search={search}
+          filter={filter}
+          order={order}
+        />
       </section>
     </main>
   );

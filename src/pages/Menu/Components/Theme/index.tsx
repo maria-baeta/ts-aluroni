@@ -1,7 +1,4 @@
-import { useState } from "react";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
-// import styles from "./Theme.module.scss";
-
 interface THEME {
   setTheme: () => void;
   themeDark: boolean;
